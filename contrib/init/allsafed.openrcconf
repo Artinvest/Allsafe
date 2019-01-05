@@ -1,0 +1,26 @@
+# /etc/conf.d/allsafed: config file for /etc/init.d/allsafed
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/allsafe/allsafe.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/allsafed"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/allsafed.pid"
+
+# Where to write allsafed data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/allsafed"
+
+# User and group to own allsafed process
+#BITCOIND_USER="allsafe"
+#BITCOIND_GROUP="allsafe"
+
+# Path to allsafed executable
+#BITCOIND_BIN="/usr/bin/allsafed"
+
+# Nice value to run allsafed under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

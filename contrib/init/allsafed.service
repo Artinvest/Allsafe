@@ -1,0 +1,26 @@
+[Unit]
+Description=AllSafe's distributed currency daemon
+After=network.target
+
+[Service]
+User=allsafe
+Group=allsafe
+
+Type=forking
+PIDFile=/var/lib/allsafed/allsafed.pid
+
+ExecStart=/usr/bin/allsafed -daemon -pid=/var/lib/allsafed/allsafed.pid \
+          -conf=/etc/allsafe/allsafe.conf -datadir=/var/lib/allsafed
+
+ExecStop=-/usr/bin/allsafe-cli -conf=/etc/allsafe/allsafe.conf \
+         -datadir=/var/lib/allsafed stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

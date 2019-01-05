@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=AllSafe
+Comment=AllSafe P2P Cryptocurrency
+Comment[fr]=AllSafe, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=AllSafe, eşten eşe kriptografik sanal para birimi
+Exec=allsafe-qt %u
+Terminal=false
+Type=Application
+Icon=allsafe128
+MimeType=x-scheme-handler/allsafe;
+Categories=Office;Finance;
